@@ -112,3 +112,7 @@ for (let i = 1; i < longFoodNames.length; i++) {
 console.log(
     `The longest food name in the list is ${strawberry} with ${strawberry.ten} characters.`
 );
+
+git add script.js
+git commit -m "Fix JavaScript syntax and complete all ten tasks"
+git push origin main
