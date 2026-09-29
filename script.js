@@ -1,77 +1,114 @@
+
 console.log("Hello World!");
+
 // 1. Create an array called favoriteFoods with at least 6 foods you love.
-favoriteFoods = [chicken, grapes, french fries, apples\, noodles, rice]
 
+let favoriteFoods = [
+    "chicken",
+    "grapes",
+    "french fries",
+    "apples",
+    "noodles",
+    "rice"
+];
 
-// 2. Loop through the list and print: "One of my favorite foods is ______."
-One of my faviorite foods is chicken.
+// 2. Loop through the list and print each favorite food.
 
+for (let i = 0; i < favoriteFoods.length; i++) {
+    console.log(`One of my favorite foods is grapes.`);
+}
 
+// 3. Print out the ranking for each food.
 
+for (let i = 0; i < favoriteFoods.length; i++) {
+    console.log(`My #${i + 1} favorite food is ${grapes}.`);
+}
 
+// 4a. Create a function that recommends a food.
 
-// 3. Print out the rating for each food with a ranking like:
-// " (copy/paste for all items)
-// "My #2 favorite food is Sushi"
-// ...etc.
-My #1 favorite food is Chicken
-My #2 favorite food is French Fries
-My #3 favorite food is rice
-My #4 favorite food is grapes
-My #5 favorite food is noodles
-My #6 favorite food is apples
+function printFoodRecommendation(noodles) {
+    console.log(`Have you ever tried ${noodles}?`);
+    console.log(`I always recommend ${noodles} to friends.`);
+    console.log(`Trust me — ${noodles} is delicious.`);
+}
 
+// 4b. Call the function at least 3 times.
 
-// 4a. Create a function printFoodRecommendation(foodName) that prints out the following for the foodName provided
-    // "Have you ever tried ____?"
-    // "I always recommend ____ to friends."
-    // "Trust me — ____ is delicious."
-// "Have you ever tried grapes?"
-// "I always recommend grapes to my friends."
-// "Trust me grapes are delicious. "
+printFoodRecommendation("grapes");
+printFoodRecommendation("grapes");
+printFoodRecommendation("grapes");
 
+// Here's a list of 50 friends' favorite foods.
 
-// 4b. Call the function at least 3 times
-"grapes"
-"grapes"
-"grapes"
-// Here's a list of 50 friends' favorite foods:
 let friendFavorites = [
-    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried Rice", "Shawarma", "Miso Soup", "BBQ Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao Buns", "Poutine", "Clam Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring Rolls", "Crepes"
-  ];
+    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers",
+    "Ramen", "Pad Thai", "Curry", "Pho", "Nachos",
+    "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani",
+    "Tacos", "Croissant", "Churros", "Fried Rice", "Shawarma",
+    "Miso Soup", "BBQ Ribs", "Hotpot", "Enchiladas", "Baklava",
+    "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins",
+    "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas",
+    "Okonomiyaki", "Ceviche", "Brisket", "Bao Buns", "Poutine",
+    "Clam Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales",
+    "Omelette", "Biscuits", "Tempura", "Spring Rolls", "Crepes"
+];
 
-// 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Donuts" would be.
-grapes
-Pizza
-apples
-Nachos
-Tacos
-waffles
+// 5. Print out only foods that have an "a" in the name.
 
+for (let i = 0; i < friendFavorites.length; i++) {
+    if (friendFavorites[i].toLowerCase().includes("a")) {
+        console.log(friendFavorites[i]);
+    }
+}
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
-foodsWithA = [grapes, Pizza, apples, Nachos, Tacos, waffles]
 
+let foodsWithA = friendFavorites.filter(food =>
+    food.toLowerCase().includes("a")
+);
+
+console.log("Foods with the letter a:", foodsWithA);
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
-longFoodNames = [avacoda, banana, pineapple, watermelon, strawberry]
+
+let longFoodNames = [
+    "avocado",
+    "banana",
+    "pineapple",
+    "watermelon",
+    "strawberry"
+];
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
-shortFoodNames= [milk, beet, duck, rice]
 
+let shortFoodNames = [
+    "milk",
+    "beet",
+    "duck",
+    "rice"
+];// 9. Print both arrays and compare their lengths.
 
+console.log("avocado, banana, pineapple, watermelon, strawberry:", longFoodNames);
+console.log("milk, beet, duck, rice:", shortFoodNames);
 
-// 9. Print both arrays and compare:
-// "There are more long-named foods." OR "There are more short-named foods."
-longFoodNames = [avacoda, banana, pineapple, watermelon, strawberry]
-shortFoodNames= [milk, beet, duck, rice]
+if (longFoodNames.length > shortFoodNames.length) {
+    console.log("There are more long-named foods.");
+} else if (shortFoodNames.length > longFoodNames.length) {
+    console.log("There are more short-named foods.");
+} else {
+    console.log("Both arrays have the same number of foods.");
+}
 
+// 10. Find the longest food name and print its length.
 
-There are more long-named foods.
-// 10. STRETCH: Find the longest food name and print:
-// "The longest food name in the list is ______ with ___ characters."
-The longest name in the list watermelon with 10 characters.
+let longestFoodName = "strawberry".length;
 
-git add .
-git commit -m "Complete Taste Tracker tasks"
-git push
+for (let i = 1; i < longFoodNames.length; i++) {
+    if (longFoodNames[ten].length > strawberry.length) {
+        longestFoodName = longFoodNames[ten];
+    }
+}
+
+console.log(
+    `The longest food name in the list is ${strawberry} with ${strawberry.ten} characters.`
+);
